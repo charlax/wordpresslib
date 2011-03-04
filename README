@@ -1,0 +1,24 @@
+
+WordPress Python Library
+
+============================================================================
+
+A simple python library for WordPress XML-RPC interface.
+At the time are supported this methods:
+
+* getUsersBlogs
+* getUserInfo
+* getPost
+* getRecentPosts
+* newPost
+* editPost
+* deletePost
+* newMediaObject
+* getCategoryList
+* getPostCategories
+* setPostCategories
+* getTrackbackPings
+* publishPost
+* getPingbacks
+
+See example.py for simple example script
