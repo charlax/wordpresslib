@@ -6,9 +6,8 @@
 	WordPress xml-rpc client library
 	use MovableType API
 	
-	Copyright (C) 2005 Michele Ferretti
-	black.bird@tiscali.it
-	http://www.blackbirdblog.it
+	Copyright (c) 2011 Charles-Axel Dein
+	Copyright (c) 2005 Michele Ferretti
 	
 	This program is free software; you can redistribute it and/or
 	modify it under the terms of the GNU General Public License
@@ -26,10 +25,10 @@
 
 """
 
-__author__ = "Michele Ferretti <black.bird@tiscali.it>"
-__version__ = "$Revision: 1.0 $"
-__date__ = "$Date: 2005/05/02 $"
-__copyright__ = "Copyright (c) 2005 Michele Ferretti"
+__author__ = "Charles-Axel Dein <ca@d3in.org>"
+__version__ = "$Revision: 1.1 $"
+__date__ = "$Date: 2011/03/03 $"
+__copyright__ = "Copyright (c) 2005 Michele Ferretti, 2011 Charles-Axel Dein"
 __license__ = "LGPL"
 
 import unittest
