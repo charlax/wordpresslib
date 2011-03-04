@@ -1,9 +1,9 @@
 WordPress Python Library
 ========================
 
-A simple python library for WordPress XML-RPC interface.
+A simple python library for WordPress (XML-RPC interface).
 
-At the time are supported this methods:
+The following methods are supported:
 
 * getUsersBlogs
 * getUserInfo
@@ -19,5 +19,28 @@ At the time are supported this methods:
 * getTrackbackPings
 * publishPost
 * getPingbacks
+* tags
 
-See example.py for simple example script
+Example
+=======
+
+	import wordpresslib
+	
+	url = "http://www.mysite.com/wordpress/xmlrpc.php"
+	
+	wp = wordpresslib.WordPressClient(url, 'username', 'password')
+	
+	wp.selectBlog(0)
+	
+	post = wordpresslib.WordPressPost()
+	
+	post.title = 'Title'
+	post.description = 'Content'
+	post.tags = ["wordpress", "lib", "python"]
+	
+	# Set to False to save as a draft
+	idPost = wp.newPost(post, True)
+
+
+
+
