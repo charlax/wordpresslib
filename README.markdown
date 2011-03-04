@@ -40,6 +40,8 @@ Example
 Thanks
 ======
 
+This project has been started by Michele Ferretti in 2005.
+
 Original project was here: 
 
 * http://code.google.com/p/wordpress-library/
