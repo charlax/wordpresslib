@@ -5,21 +5,17 @@ A simple python library for WordPress (XML-RPC interface).
 
 The following methods are supported:
 
-* getUsersBlogs
-* getUserInfo
-* getPost
-* getRecentPosts
-* newPost
-* editPost
-* deletePost
-* newMediaObject
-* getCategoryList
-* getPostCategories
-* setPostCategories
-* getTrackbackPings
-* publishPost
-* getPingbacks
-* tags
+* Publishing new post (title, body, tags, categories...)
+* Editing old post
+* Publishing draft post
+* Deleting post
+* Changing post categories
+* Getting blog and user informations
+* Upload multimedia files like movies or photos
+* Getting last recents post
+* Getting last post
+* Getting Trackbacks of post
+* Getting Pingbacks of post
 
 Example
 =======
@@ -41,6 +37,13 @@ Example
 	# Set to False to save as a draft
 	idPost = wp.newPost(post, True)
 
+Thanks
+======
+
+Original project was here: 
+
+* http://code.google.com/p/wordpress-library/
+* http://www.blackbirdblog.it/progetti/wordpress-library#english
 
 
 
