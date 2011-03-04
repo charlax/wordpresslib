@@ -114,6 +114,7 @@ class WordPressPost:
 		self.user = ''
 		self.allowPings	= False
 		self.allowComments = False
+		self.tags = []
 
 		
 class WordPressClient:
@@ -144,6 +145,7 @@ class WordPressClient:
 		postObj.id 				= int(post['postid'])
 		postObj.categories 		= post['categories']
 		postObj.allowPings 		= post['mt_allow_pings'] == 1
+		postObj.tags			= post['mt_keywords']
 		return postObj
 		
 	def _filterCategory(self, cat):
@@ -223,7 +225,8 @@ class WordPressClient:
 		"""
 		blogContent = {
 			'title' : post.title,
-			'description' : post.description	
+			'description' : post.description,
+			'mt_keywords': post.tags	
 		}
 		
 		# add categories
