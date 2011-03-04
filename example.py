@@ -10,35 +10,39 @@ import wordpresslib
 print 'Example of posting.'
 print
 
-wordpress = raw_input('Wordpress URL:')
+url = raw_input('Wordpress URL (xmlrpc.php will be added):')
 user = raw_input('Username:')
 password = raw_input('Password:')
 
 # prepare client object
-wp = wordpresslib.WordPressClient(wordpress, user, password)
+wp = wordpresslib.WordPressClient(url+"xmlrpc.php", user, password)
 
 # select blog id
 wp.selectBlog(0)
 	
 # upload image for post
-imageSrc = wp.newMediaObject('python.jpg')
+# imageSrc = wp.newMediaObject('python.jpg')
 
-if imageSrc:
-	# create post object
-	post = wordpresslib.WordPressPost()
-	post.title = 'Test post'
-	post.description = '''
-	Python is the best programming language in the earth !
-	
-	<img src="%s" />
-	
-	''' % imageSrc
-	post.categories = (wp.getCategoryIdFromName('Python'),)
-	
-	# pubblish post
-	idNewPost = wp.newPost(post, True)
-	
-	print
-	print 'posting successfull!'
+# FIXME if imageSrc:
+
+# create post object
+post = wordpresslib.WordPressPost()
+post.title = 'Test post'
+post.description = '''
+Python is the best programming language in the earth !
+
+No image BROKEN FIXME <img src="" />
+
+'''
+#post.categories = (wp.getCategoryIdFromName('Python'),)
+
+# Add tags
+post.tags = ["python", "snake"]
+
+# do not publish post
+idNewPost = wp.newPost(post, False)
+
+print
+print 'Posting successfull! (Post has not been published though)'
 	
 
