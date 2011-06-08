@@ -5,7 +5,7 @@ A simple python library for WordPress (XML-RPC interface).
 
 The following methods are supported:
 
-* Publishing new post (title, body, tags, categories...)
+* Publishing new post (title, body, tags, categories, custom fields…)
 * Editing old post
 * Publishing draft post
 * Deleting post
@@ -37,6 +37,13 @@ Example
 	# Set to False to save as a draft
 	idPost = wp.newPost(post, True)
 
+Contributing
+============
+
+Very happy to have contributions to this project. Please write tests for any new features and always ensure the current tests pass.
+
+License: GNU/GPL
+
 Thanks
 ======
 
@@ -46,6 +53,3 @@ Original project was here:
 
 * http://code.google.com/p/wordpress-library/
 * http://www.blackbirdblog.it/progetti/wordpress-library#english
-
-
-
