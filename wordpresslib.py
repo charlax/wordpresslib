@@ -114,7 +114,11 @@ class WordPressPost:
 		self.allowPings	= False
 		self.allowComments = False
 		self.tags = []
+		self.customFields = []
 
+	def addCustomField(self, key, value):
+		kv = {'key':key, 'value':value}
+		self.customFields.append(kv)
 		
 class WordPressClient:
 	"""Client for connect to WordPress XML-RPC interface
@@ -145,6 +149,7 @@ class WordPressClient:
 		postObj.categories 		= post['categories']
 		postObj.allowPings 		= post['mt_allow_pings'] == 1
 		postObj.tags			= post['mt_keywords']
+		postObj.customFields            = post['custom_fields']
 		return postObj
 		
 	def _filterCategory(self, cat):
@@ -225,7 +230,8 @@ class WordPressClient:
 		blogContent = {
 			'title' : post.title,
 			'description' : post.description,
-			'mt_keywords': post.tags	
+			'mt_keywords': post.tags,
+			'custom_fields': post.customFields,
 		}
 		
 		# add categories
