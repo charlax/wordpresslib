@@ -375,7 +375,7 @@ class WordPressClient:
 			f.close()
 
 			mimetype = 'unknown/unknown'
-			mimeguess = mimetypes.guess_type(f)
+			mimeguess = mimetypes.guess_type(mediaFileName)
 			if mimeguess and mimeguess[0]:
 				mimetype = mimeguess[0]
 
