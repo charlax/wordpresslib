@@ -55,6 +55,7 @@ import os
 import xmlrpclib
 import datetime
 import time
+import mimetypes
 
 class WordPressException(exceptions.Exception):
 	"""Custom exception for WordPress client operations
@@ -372,9 +373,15 @@ class WordPressClient:
 			f = file(mediaFileName, 'rb')
 			mediaBits = f.read()
 			f.close()
-			
+
+			mimetype = 'unknown/unknown'
+			mimeguess = mimetypes.guess_type(f)
+			if mimeguess and mimeguess[0]:
+				mimetype = mimeguess[0]
+
 			mediaStruct = {
 				'name' : os.path.basename(mediaFileName),
+				'type' : mimetype,
 				'bits' : xmlrpclib.Binary(mediaBits)
 			}
 			
