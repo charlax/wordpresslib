@@ -1,6 +1,8 @@
 WordPress Python Library
 ========================
 
+⚠️ **This library is not maintained anymore**
+
 A simple python library for WordPress (XML-RPC interface).
 
 The following methods are supported:
