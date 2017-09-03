@@ -43,6 +43,6 @@ post.tags = ["python", "snake"]
 idNewPost = wp.newPost(post, False)
 
 print
-print 'Posting successfull! (Post has not been published though)'
+print 'Posting successful! (Post has not been published though)'
 	
 
